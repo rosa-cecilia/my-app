@@ -1,10 +1,25 @@
-import React from 'react'
-//import logo from './imagenes/Logo.svg'
-import { ReactComponent as Logo } from './imagenes/Logo.svg'
+import { ReactComponent as Logo } from './Images/Logo.svg';
+import Nav from "./Nav";
+/*
+import { Routes, Route } from 'react-router-dom';
+import About from './Pages/About';
+import Menu from './Pages/Menu';
+import Login from './Pages/Login';
+import Reservation from './Pages/Reservation';
+import Orderonline from './Pages/Order-online';
+import Home from './Pages/Home';
+*/
 
 function Header() {
     return (
-        <Logo />
+        <div className="Header">
+            <nav>
+                <Logo />
+                <Nav />
+            </nav>
+
+
+        </div>
     );
 }
-export default Header
+export default Header;

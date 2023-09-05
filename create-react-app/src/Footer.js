@@ -1,6 +1,7 @@
 function Footer() {
     return (
-        <p>Rosa • © 2023</p>
+        <footer>Copyright Rosa 2023 ©</footer>
     )
+
 }
 export default Footer;

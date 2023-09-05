@@ -1,38 +1,78 @@
-const datanav = [
-    {
-        url: "#Home",
-        Name: "Home",
-    },
-    {
-        url: "#About",
-        Name: "About",
-    },
-    {
-        url: "#Menu",
-        Name: "Menu",
-    },
-    {
-        url: "#Reservation",
-        Name: "Reservation",
-    },
-    {
-        url: "#Orderonline",
-        Name: "Order online",
-    },
-    {
-        url: "#login",
-        Name: "Login",
-    },
-]
-
+import { Link } from 'react-router-dom';
 function Nav() {
-    return (
-        <ul>
-            {
-                datanav.map(datanav => <li> <a href={datanav.url}> {datanav.Name}</a></li>)
-            }
-        </ul>
-    );
+    const navItem = [
+        {
+            Nname: "Home",
+            Nurl: "/",
 
+        },
+
+        {
+            Nname: "About",
+            Nurl: '/Pages/About',
+
+        },
+        {
+            Nname: "Menu",
+            Nurl: '/Pages/Menu',
+
+        },
+        {
+            Nname: "Reservation",
+            Nurl: '/Pages/Reservation',
+
+        },
+        {
+            Nname: "Order online",
+            Nurl: '/Pages/Order-online',
+
+        },
+        {
+            Nname: "Login",
+            Nurl: '/Pages/Login',
+        },
+    ]
+
+    return (
+        <div>
+            {
+                navItem.map((item) => (
+                    <Link className='nav-item' to={item.Nurl} >  {item.Nname}</Link>
+                ))
+            }
+
+
+        </div>
+
+        /* <ul>
+                {
+                    navItem.map((item) => (
+                        <li > <a href={item.Nurl} > {item.Nname}</a></li>
+                    ))
+                }
+            </ul>
+            */
+
+
+        /*<nav>
+                {
+                    navItem.map((item) => (
+                        <Link to={item.Nurl} className='nav-item'>{item.Nname}</Link>
+                    ))
+                }
+
+            </nav>
+            <Routes>
+                <Route path='/' element={<Home />} />
+                <Route path='/Pages/About' element={<About />} />
+                <Route path='/Pages/Menu' element={<Menu />} />
+                <Route path='/Pages/Reservation' element={<Reservation />} />
+                <Route path='/Pages/Order-online' element={<Orderonline />} />
+                <Route path='/Pages/Login' element={<Login />} />
+            </Routes>
+            */
+
+
+    );
 }
 export default Nav;
