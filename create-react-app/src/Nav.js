@@ -34,7 +34,7 @@ function Nav() {
     ]
 
     return (
-        <div>
+        <nav>
             {
                 navItem.map((item) => (
                     <Link className='nav-item' to={item.Nurl} >  {item.Nname}</Link>
@@ -42,7 +42,7 @@ function Nav() {
             }
 
 
-        </div>
+        </nav>
 
         /* <ul>
                 {

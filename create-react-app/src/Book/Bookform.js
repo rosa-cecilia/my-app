@@ -17,42 +17,18 @@ function Bookform(props) {
 
 
     }
-    {/** 
-        const myfunction = (e) => {
-            const value = e.target.value
-            props.setcDate(value)
-            props.setavTimes({ type: 'UP_DATE', payload: value })
-        }
 
-        const [guests, setGuest] = useState(4);
-        const [occasion, setOccasion] = useState('Birthday');
-        //const [aviableTimes, setaviableTimes] = useState('17:00');
-        //const [resdate, setRestdate] = useState(current)
-        function handleClick(e) {
-            setGuest(guests);
-            setOccasion(occasion);
-            props.setavTimes(props.avTimes);
-        }
-    
-    */}
+
     return (
         <div>
             <form style={my_style} onSubmit={props.newSetBookingResult}>
-                <label for="rest-date">Choose date</label>
-                {/*<input type="date" id="res-date" value={props.cDate} onChange={myfunction} />*/}
-                <input type="date" id="res-date" value={props.newSelectedDate} onChange={e => props.newsetSelectedDate(e.target.value)} />
-                <label for="res-time">Choose time</label>
-                {
-                    /**
-                     * <select id="res-time ">
-                    {
-                        props.avTimes.date.map((data) => (
-                            <option key={data} value={data}> {data} </option>
-                        ))
-                    }
-                </select>
-                     */
-                }
+                <label htmlFor="Name">Name </label>
+                <input type="text" id="name" name="name" onChange={props.newsetName} value={props.newName} required minLength={5} maxLength={15} pattern="[A-Za-z ]+" />
+                <label htmlFor="Email"> Email</label>
+                <input type="email" id="email" name="email" value={props.newMail} onChange={props.newsetMail} required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}" />
+                <label htmlFor="rest-date">Choose date</label>
+                <input type="date" id="res-date" name="date" value={props.newSelectedDate} onChange={props.newsetSelectedDate} required />
+                <label htmlFor="res-time">Choose time</label>
                 <select id="res-time " value={props.newSelectedTime} onChange={props.newsetSelectedTime}>
                     {
                         props.newTimes.map((data) => (
@@ -60,17 +36,14 @@ function Bookform(props) {
                         ))
                     }
                 </select>
-                <label for="guests">Number of guests</label>
-                { /** <input type="number" min="1" max="10" id="guests" value={guests} onChange={e => setGuest(e.target.value)} /> */}
-                <input type="number" min="1" max="10" id="guests" value={props.newGuest} onChange={e => props.newsetSelectedGuest(e.target.value)} />
-                <label for="occasion">Occasion</label>
-                {/** <select id="occasion" value={occasion} onChange={e => setOccasion(e.target.value)}> */}
-                <select id="occasion" value={props.newOcasion} onChange={props.newsetSelectadOcasion}>
+                <label htmlFor="guests">Number of guests</label>
+                <input type="number" min="1" max="15" id="guests" name="guests" value={props.newGuest} onChange={props.newsetSelectedGuest} />
+                <label htmlFor="ocasion">Occasion</label>
+                <select id="ocasion" name="ocasion" value={props.newOcasion} onChange={props.newsetSelectedOcasion}>
                     <option>Birthday</option>
                     <option>Anniversary</option>
                 </select>
-                { /**  <input type="submit" value="Make Your reservation" onClick={handleClick} /> */}
-                <button type="submit">Submit</button>
+                <button type="submit" disabled={Object.values(props.newErrors).some(error => error !== '')}> <span>&times;</span>Submit</button>
             </form>
             {props.newBooking === true && <p>Booking successful!</p>}
             {props.newBooking === false && <p>Booking failed. Please try again.</p>}

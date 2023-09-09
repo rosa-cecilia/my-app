@@ -12,14 +12,14 @@ import Home from './Pages/Home';
 
 function Header() {
     return (
-        <div className="Header">
+        <header className="Header">
             <nav>
                 <Logo />
                 <Nav />
             </nav>
 
 
-        </div>
+        </header>
     );
 }
 export default Header;
