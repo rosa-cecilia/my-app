@@ -1,0 +1,88 @@
+.about-us {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #edefee;
+  padding: 20px;
+}
+
+.testimonial {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #495e55;
+  color: #edefee;
+}
+
+.testimonial p {
+  margin: 0;
+}
+
+.testimonial-text {
+  text-align: center;
+}
+
+.testimonial-photo img {
+  max-width: 100%;
+  border-radius: 50%; /* Rounded border for the photos */
+}
+
+/* Alternating sides */
+.photo-left {
+  flex-direction: row;
+}
+
+.photo-right {
+  flex-direction: row-reverse;
+}
+
+/* Add some margin to separate testimonials */
+.testimonial + .testimonial {
+  margin-top: 20px;
+}
+
+/* Rest of the CSS styles */
+.testimonial-text {
+  flex: 1; /* Allow the text to grow and fill the available space */
+  padding: 20px; /* Add some padding for spacing */
+  border-radius: 0 20px 20px 0; /* Rounded corners on the right side */
+}
+
+.testimonial-text p {
+  font-size: 16px;
+  margin-bottom: 10px; /* Spacing between paragraphs */
+}
+
+.testimonial-text h4 {
+  font-size: 18px;
+  margin: 0; /* Remove default margin for the name */
+}
+
+
+@media screen and (max-width: 412px) {
+  .about-us {
+    flex-direction: column; /* Switch to a one-column layout */
+    align-items: center; /* Center content horizontally */
+  }
+
+  .testimonial {
+    width: 100%; /* Full width for testimonials */
+    margin: 20px 0; /* Adjust margin to separate testimonials */
+    text-align: center; /* Center text horizontally */
+  }
+
+  .testimonial-photo {
+    text-align: center; /* Center the photo horizontally */
+  }
+
+  .testimonial-photo img {
+    max-width: 100px; /* Adjust the maximum width of the photos */
+    max-height: 100px; /* Adjust the maximum height of the photos */
+    display: block; /* Center the photos horizontally */
+    margin: 0 auto; /* Center the photos horizontally */
+  }
+}

@@ -1,0 +1,105 @@
+.Pseudoheader{
+  background-color:  #495e55;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+img{
+  width: 250px;
+  height: 250px;
+  border-radius: 25px;
+  
+}
+.black-box {
+  position: relative;
+  z-index: 1;
+  min-height: 200px;
+  margin: 30px;
+}
+
+.gray-box {
+  position: absolute;
+  z-index: 3; /* gray box will be above both green and black box */
+  background: lightgray;
+  height: 60px;  
+  width: 50;
+  right: 60px;
+  top: 120px;
+  border-radius: 25px;
+}
+button{
+  width: 150px;
+  height: 40px;
+  border-radius: 25px;
+  background-color: #F4CE14;
+  color: #333333;
+  font-size: large;
+  align-content: center;
+}
+.black-box h1{
+  color: #F4CE14;
+}
+/*Week section*/
+.weeksection{
+  display:flex;
+  justify-content: space-between;
+  margin-top: 120px;
+  margin-left: 100px;
+  margin-right: 100px;
+  color: #141414;
+  align-items: center;
+}
+
+
+#card-distribution {
+  display: grid;
+  margin-left: 100px;
+  margin-bottom: 20px;
+  align-items: center;
+  grid-template-columns: repeat(3, auto); /* Default to 3 columns on wider screens */
+
+  /* Media query for screens with a maximum width of 768px */
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(2, auto); /* Change to 2 columns on screens up to 768px wide */
+    margin-left: 2%;
+    margin-right: 1%;
+    margin-top: 5%;
+  }
+
+  /* Media query for screens with a maximum width of 414px (e.g., mobile screens) */
+  @media (max-width: 414px) {
+    grid-template-columns: repeat(1, auto); /* Change to 1 column on screens up to 414px wide */
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+}
+.weeksection h1{
+    color: #495e55;
+}
+@media screen and (max-width:780px){
+    .gray-box{
+       top: 70%;
+       right: 1%;
+    }
+    .weeksection{
+        margin-left: 2%;
+        margin-right: 2%;
+        margin-top: 25%;
+    }
+    
+}
+@media screen and (max-width:480px){
+    .gray-box{
+        display: none;
+    }
+     .weeksection{
+        margin-left: 2%;
+        margin-right: 2%;
+        margin-top: 5%;
+    }
+    .weeksection button{
+        display: none;
+    }
+    
+}

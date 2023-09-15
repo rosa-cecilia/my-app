@@ -1,0 +1,49 @@
+.my_style {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    gap: 1rem;
+    background: color #cecccc; ;
+    }
+.my_style2{
+    border: 2px solid #595e55;
+    border-radius: 12px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px #595e55 ;
+    padding: 1rem;
+    color: #595e55;
+    font-size: 1.2rem;
+}
+.my_style3{
+    font-size: 2.5rem;
+    color: #f4ce14;
+    font-family: 'Courier New', Courier, monospace;}
+.my_style3  h2{
+    color: #f4ce14;
+}
+    @media screen and (max-width:412px){
+        .my_style3{
+            font-size: 1rem;
+        }
+        .my_style2{
+            font-size: 1rem;
+        }
+    }
+     @media screen and (max-width:720px){
+        .my_style3{
+            font-size: 1rem;
+        }
+        .my_style2{
+            font-size: 1rem;
+        }
+    }
+     @media screen and (max-width:300px){
+        .my_style3{
+            font-size: 1rem;
+        }
+        .my_style2{
+            font-size: 0.5rem;
+        }
+    }

@@ -1,0 +1,70 @@
+nav {
+   display:flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.nav-item {
+  display: inline-block;
+  font-size: 20px;
+  padding: 20px;
+}
+a{
+  text-decoration: none;
+  color: black;
+}
+/* unvisited link */
+a:link {
+  color: #141414;
+}
+
+
+/* mouse over link */
+a:hover {
+  color: #FF00FF;
+}
+
+/* selected link */
+a:active {
+  color: #0000FF;
+} 
+@media screen and (max-width: 768px) {
+   /* Style individual navigation items for tablets and smaller screens */
+  .nav-item {
+    padding: 10px; /* Reduce padding */
+    font-size: 16px; /* Decrease font size */
+  }
+}
+@media screen and (max-width: 480px) {
+     /* Adjust navigation items for phones */
+  .nav-item {
+    display: block; /* Display vertically */
+    font-size: 16px; /* Decrease font size */
+    text-align: center; /* Center text */
+    background-color: lightgray; /* Change background color to gray */
+    
+  }
+  nav {
+    /* Set flex-direction to column to make it display vertically */
+    flex-direction: column;
+    
+    
+    /* You can also add other styles like background color for the menu here */
+    background-color: lightgray;
+  }
+  a:hover {
+  background-color: #555;
+  color: white;
+}
+ nav{
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+ }
+}
+
+
+  /* Add any other responsive adjustments you need for phone screens */

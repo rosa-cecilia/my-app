@@ -1,24 +1,27 @@
 function Bookform(props) {
+
     const my_style = {
         display: 'grid',
         gap: 20,
-        'margin-left': '25vw',
-        width: '50vw',
+        'margin-left': '15%', // Adjust the margin as needed
+        'margin-right': '15%', // Adjust the margin as needed
+        'max-width': '60%', // Set a maximum width for the form
         border: 'solid #495e55',
         'border-radius': 20,
-        padding: 30,
+        padding: 20,
         'margin-bottom': '20vh',
         'margin-top': '20vh',
         'font-family': 'verdana',
         'font-size': '1rem',
         color: '#495e55',
-        'box-shadow': ' 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)',
+        'box-shadow': '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)',
         'background-color': '#edefee',
-
-
+    };
+    if (window.matchMedia('(max-width: 280px)').matches) {
+        my_style['margin-left'] = '2%'; // Adjust the margin as needed for smaller screens
+        my_style['margin-right'] = '2%'; // Adjust the margin as needed for smaller screens
+        my_style['max-width'] = '96%'; // Adjust the maximum width for smaller screens
     }
-
-
     return (
         <div>
             <form style={my_style} onSubmit={props.newSetBookingResult}>

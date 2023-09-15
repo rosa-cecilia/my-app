@@ -1,6 +1,6 @@
 function Footer() {
     return (
-        <footer>Copyright Rosa 2023 ©</footer>
+        <footer> &copy; {new Date().getFullYear()} Little Lemon restaurant</footer>
     )
 
 }

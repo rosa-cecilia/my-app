@@ -1,9 +1,11 @@
 import React from "react";
-import pseudoheder from "./Images/MarioandAdrian b.jpg"
-import myimg1 from "./Images/lemondessert.jpg"
-import myimg2 from "./Images/restauranfood.jpg"
-import myimg3 from "./Images/greeksalad.jpg"
+import { Link } from "react-router-dom";
+import pseudoheder from "./Images/MarioandAdrianA.jpg";
+import myimg1 from "./Images/lemondessert.jpg";
+import myimg2 from "./Images/restauranfood.jpg";
+import myimg3 from "./Images/greeksalad.jpg";
 import Card from "./Card";
+import './Css/Main.css'
 
 
 
@@ -49,7 +51,7 @@ function Main() {
                     <h1>Little Lemon</h1>
                     <h2> Chicago</h2>
                     <p>Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las in</p>
-                    <button> Reserve table</button>
+                    <button> <Link to={'/Pages/Reservation'}> Reserve table </Link></button>
                 </div>
                 <div class="gray-box">
                     <img src={pseudoheder} alt="imageheader" />
@@ -57,7 +59,7 @@ function Main() {
             </div>
             <div className="weeksection">
                 <h1> This week specials </h1>
-                <button>Online menu</button>
+                <button> <Link to={'/Pages/Menu'}> Online menu</Link></button>
             </div>
             <div id="card-distribution">
                 {dataObject.map((project) => (

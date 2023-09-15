@@ -1,0 +1,64 @@
+/* Menu.css */
+.menu-page {
+  display: flex;
+  flex-wrap: wrap; /* Wrap menu sections to the next line */
+  justify-content: space-between; /* Spread sections evenly */
+  padding: 20px;
+  background-color: #edefee;
+}
+
+.menu-section {
+  /*flex-basis: calc(33.33% - 20px); /* 3 columns per row, with some spacing */
+  margin-bottom: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 100%;
+}
+
+.menu-item {
+  display: grid;
+  align-items: center;
+  padding: 10px;
+  grid-template-columns: repeat(2, 1fr); /* Two columns */
+  grid-gap: 20px; /* Gap between items */
+}
+
+.dish-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px; /* Add border radius to images */
+  margin-right: 30px;
+}
+
+.dish-info {
+  flex-grow: 1;
+}
+
+.dish-name {
+  font-weight: bold;
+}
+
+.dish-price {
+  color: #F4CE14;
+}
+h2, .dish-name{
+    color: #495e55;
+}
+@media screen and (max-width: 414px) {
+  .menu-section {
+    width: 100%; /* Remove fixed width for single column layout */
+  }
+  
+  .menu-item {
+    display: flex; /* Change to a one-column layout */
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the left */
+  }
+
+  .dish-image {
+     /* Remove margin for images */
+    margin-bottom: 10px; /* Add space between items */
+  }
+}
